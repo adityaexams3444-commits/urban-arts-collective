@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Professional Society | Modern Network</title>
-    <meta name="description" content="Join our professional society for networking, events, and career development.">
+    <title>Commercial & Corporate Law Society | Campus Law Centre</title>
+    <meta name="description" content="Join the Commercial & Corporate Law Society at Campus Law Centre for networking, events, and career development in law.">
     
     <style>
         * {
@@ -17,8 +17,8 @@
         :root {
             --primary-bg: #ffffff;
             --secondary-bg: #f8f9fa;
-            --accent: #2563eb;
-            --accent-dark: #1e40af;
+            --accent: #8b4513;
+            --accent-dark: #654321;
             --text-primary: #1a202c;
             --text-secondary: #4a5568;
             --border-light: #e2e8f0;
@@ -42,77 +42,175 @@
             position: sticky;
             top: 0;
             z-index: 1000;
-            background: var(--primary-bg);
-            border-bottom: 1px solid var(--border-light);
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            background: linear-gradient(to right, #f5f5f5, #e8e8e8);
+            border-bottom: 1px solid #d0d0d0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
         }
 
         nav {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 2rem;
+            padding: 1rem 2rem;
+            gap: 2rem;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 1rem;
             text-decoration: none;
             letter-spacing: -0.5px;
         }
 
-        .nav-links {
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-size: 0.85rem;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo-title {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #1a202c;
+            line-height: 1.15;
+            letter-spacing: 0.5px;
+        }
+
+        .logo-subtitle {
+            font-size: 0.65rem;
+            color: #999;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .nav-center {
             display: flex;
             gap: 2.5rem;
             list-style: none;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
         }
 
-        .nav-links a {
+        .nav-center a {
             text-decoration: none;
-            color: var(--text-secondary);
+            color: #555;
             font-weight: 500;
             font-size: 0.95rem;
             transition: color var(--transition);
             position: relative;
         }
 
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--accent);
+        .nav-center a:hover,
+        .nav-center a.active {
+            color: #a52a2a;
         }
 
-        .nav-links a.active::after {
+        .nav-center a.active::after {
             content: '';
             position: absolute;
-            bottom: -6px;
+            bottom: -8px;
             left: 0;
             right: 0;
             height: 2px;
-            background: var(--accent);
+            background: #a52a2a;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-left: auto;
+        }
+
+        .search-box {
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            color: #333;
+            font-size: 0.9rem;
+            outline: none;
+            width: 150px;
+        }
+
+        .search-box input::placeholder {
+            color: #aaa;
+        }
+
+        .search-box svg {
+            width: 16px;
+            height: 16px;
+            stroke: #aaa;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            border-left: 1px solid #ccc;
+            padding-left: 1.5rem;
+        }
+
+        .social-links a {
+            text-decoration: none;
+            color: #1a202c;
+            font-size: 1.2rem;
+            transition: color var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .social-links a:hover {
+            color: #a52a2a;
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
             color: white;
             padding: 8rem 2rem;
             text-align: center;
             position: relative;
             overflow: hidden;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(139, 69, 19, 0.6), rgba(101, 67, 33, 0.6)), url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICTAEAOw==') center/cover;
         }
 
         .hero::before {
             content: '';
             position: absolute;
             top: 0;
+            left: 0;
             right: 0;
-            width: 500px;
-            height: 500px;
-            background: radial-gradient(circle, rgba(37, 99, 235, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
+            bottom: 0;
+            background: rgba(101, 67, 33, 0.4);
+            z-index: 1;
             pointer-events: none;
         }
 
@@ -120,7 +218,7 @@
             max-width: 800px;
             margin: 0 auto;
             position: relative;
-            z-index: 1;
+            z-index: 2;
         }
 
         .hero h1 {
@@ -170,52 +268,115 @@
             color: white;
         }
 
-        /* Features Section */
-        .features {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 6rem 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-        }
-
-        .feature-card {
-            padding: 2rem;
-            background: var(--secondary-bg);
-            border-radius: 8px;
-            transition: all var(--transition);
-            border: 1px solid transparent;
-        }
-
-        .feature-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
-        }
-
-        .feature-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--accent);
-            border-radius: 8px;
+        /* Countdown Section */
+        .countdown-section {
+            background: linear-gradient(to bottom, #f5f5f5 60%, #2a1a1a 60%);
+            padding: 0;
+            margin: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
         }
 
-        .feature-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: var(--text-primary);
+        .countdown-container {
+            background: white;
+            border: 3px solid #1a3a6f;
+            margin: 3rem 2rem;
+            max-width: 900px;
+            width: 100%;
+            padding: 3rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            text-align: center;
         }
 
-        .feature-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
+        .countdown-title {
+            font-family: "Times New Roman", serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #5d0b0b;
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .countdown-items {
+            display: flex;
+            gap: 3rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .countdown-number {
+            font-size: 4rem;
+            font-weight: 700;
+            color: #be1e2d;
+            font-family: Arial, sans-serif;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .countdown-label {
+            font-size: 1.1rem;
+            color: #be1e2d;
+            font-family: Arial, sans-serif;
+            font-weight: 500;
+        }
+
+        @media (max-width: 1024px) {
+            .countdown-container {
+                padding: 2rem;
+                gap: 1.5rem;
+            }
+
+            .countdown-title {
+                font-size: 2.2rem;
+            }
+
+            .countdown-items {
+                gap: 2rem;
+            }
+
+            .countdown-number {
+                font-size: 3.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .countdown-section {
+                background: #f5f5f5;
+            }
+
+            .countdown-container {
+                border: 2px solid #1a3a6f;
+                padding: 1.5rem;
+                margin: 1.5rem 1rem;
+            }
+
+            .countdown-title {
+                font-size: 1.8rem;
+            }
+
+            .countdown-items {
+                gap: 1.5rem;
+            }
+
+            .countdown-number {
+                font-size: 2.5rem;
+            }
+
+            .countdown-label {
+                font-size: 0.9rem;
+            }
         }
 
         /* About Section */
@@ -252,13 +413,22 @@
         .about-image {
             width: 100%;
             height: 400px;
-            background: linear-gradient(135deg, var(--accent) 0%, #3b82f6 100%);
+            background: #1db854;
             border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 3rem;
-            color: rgba(255, 255, 255, 0.2);
+            font-size: 5rem;
+            color: #a52a2a;
+            overflow: hidden;
+            border: 2px solid #d0d0d0;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
         }
 
         /* Events Section */
@@ -421,6 +591,27 @@
         }
 
         /* Responsive */
+        @media (max-width: 1024px) {
+            nav {
+                flex-wrap: wrap;
+            }
+
+            .nav-center {
+                gap: 1.5rem;
+                flex-basis: 100%;
+                order: 3;
+                margin-top: 0.5rem;
+            }
+
+            .nav-right {
+                margin-left: 0;
+            }
+
+            .search-box input {
+                width: 120px;
+            }
+        }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2rem;
@@ -436,7 +627,7 @@
                 font-size: 1.75rem;
             }
 
-            .nav-links {
+            .nav-center {
                 gap: 1rem;
                 font-size: 0.85rem;
             }
@@ -449,17 +640,32 @@
             .about-image {
                 height: 300px;
             }
+
+            .search-box {
+                display: none;
+            }
         }
 
         @media (max-width: 480px) {
             nav {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 0.5rem;
                 padding: 1rem;
             }
 
-            .nav-links {
+            .nav-center {
                 flex-wrap: wrap;
+                justify-content: center;
+                gap: 0.75rem;
+            }
+
+            .social-links {
+                border-left: none;
+                padding-left: 0;
+                border-top: 1px solid #444;
+                padding-top: 1rem;
+                margin-top: 1rem;
+                width: 100%;
                 justify-content: center;
             }
 
@@ -482,41 +688,72 @@
     <!-- Header -->
     <header>
         <nav>
-            <a href="#" class="logo">Society</a>
-            <ul class="nav-links">
+            <a href="#" class="logo">
+                <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 180'%3E%3C!-- Red outer circles --%3E%3Ccircle cx='100' cy='100' r='70' fill='none' stroke='%23a52a2a' stroke-width='16'/%3E%3Ccircle cx='100' cy='100' r='50' fill='none' stroke='%23a52a2a' stroke-width='12'/%3E%3C!-- Black curved bird head/body --%3E%3Cpath d='M 100 40 Q 140 70 140 100 Q 140 130 100 160 Q 70 150 70 100 Q 70 70 100 40' fill='%23000000' stroke='%23000000' stroke-width='2'/%3E%3C!-- Bird eye --%3E%3Ccircle cx='125' cy='95' r='4' fill='%23a52a2a'/%3E%3C!-- Flying birds --%3E%3Cg stroke='%23a52a2a' stroke-width='3' fill='none' stroke-linecap='round'%3E%3Cpath d='M 130 50 L 145 35 L 155 50'/%3E%3Cpath d='M 150 45 L 170 25 L 180 45'/%3E%3Cpath d='M 160 55 L 185 40 L 195 60'/%3E%3Cpath d='M 145 60 L 165 45 L 175 65'/%3E%3Cpath d='M 170 50 L 190 30 L 200 55'/%3E%3C/g%3E%3C/svg%3E" alt="Logo" style="height: 50px; width: auto;"/>
+                <div class="logo-text">
+                    <div class="logo-title">CORPORATE AND<br>COMMERCIAL LAW<br>SOCIETY</div>
+                </div>
+            </a>
+
+            <ul class="nav-center">
                 <li><a href="#" class="nav-link active" data-section="home">Home</a></li>
-                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About Us</a></li>
+                <li><a href="#" class="nav-link" data-section="writers">Become A Writer</a></li>
+                <li><a href="#" class="nav-link" data-section="articles">Articles</a></li>
                 <li><a href="#events" class="nav-link" data-section="events">Events</a></li>
-                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+                <li><a href="#" class="nav-link" data-section="more">More</a></li>
             </ul>
+
+            <div class="nav-right">
+                <div class="search-box">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                        <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <input type="text" placeholder="Search...">
+                </div>
+
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank" title="Instagram">📷</a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">in</a>
+                    <a href="#" title="Website">🌐</a>
+                    <a href="mailto:contact@lawsociety.com" title="Email">✉️</a>
+                </div>
+            </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section class="hero" id="home" style="background-image: linear-gradient(rgba(139, 69, 19, 0.6), rgba(101, 67, 33, 0.6)), url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdnMwZ3IzNWVhM2JodDdxanphanV3YnFqM3UzY2hqYTc1bjM3c2hwdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/0O0NYniZS272kIvWlZ/giphy.gif'); background-size: cover; background-position: center; background-attachment: fixed;">
         <div class="hero-content">
-            <h1>Stay Ahead of the Game</h1>
-            <p>Join our professional society for exclusive networking opportunities, expert-led events, and career development resources designed for ambitious professionals.</p>
+            <h1>Commercial & Corporate Law Excellence</h1>
+            <p>Join the premier law society at Campus Law Centre. Stay ahead with expert-led sessions on commercial law, corporate transactions, and industry insights from leading legal professionals.</p>
             <a href="#contact" class="cta-button">Join Us Today</a>
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="feature-card">
-            <div class="feature-icon">🎯</div>
-            <h3>Professional Growth</h3>
-            <p>Develop your skills and knowledge through curated learning experiences and mentorship opportunities.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">🤝</div>
-            <h3>Networking</h3>
-            <p>Connect with industry leaders, peers, and potential mentors in a supportive professional community.</p>
-        </div>
-        <div class="feature-card">
-            <div class="feature-icon">📚</div>
-            <h3>Exclusive Content</h3>
-            <p>Access industry insights, case studies, and expert analysis available only to our members.</p>
+    <!-- Countdown Section -->
+    <section class="countdown-section">
+        <div class="countdown-container">
+            <div class="countdown-title">INAUGURATION<br>CEREMONY</div>
+            <div class="countdown-items">
+                <div class="countdown-item">
+                    <div class="countdown-number" id="days">00</div>
+                    <div class="countdown-label">Days</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="hours">00</div>
+                    <div class="countdown-label">Hours</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="minutes">00</div>
+                    <div class="countdown-label">Minutes</div>
+                </div>
+                <div class="countdown-item">
+                    <div class="countdown-number" id="seconds">00</div>
+                    <div class="countdown-label">Seconds</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -524,13 +761,15 @@
     <section class="about" id="about">
         <div class="about-content">
             <div class="about-text">
-                <h2>About Our Society</h2>
-                <p>Founded to foster professional excellence and create meaningful connections, our society brings together like-minded individuals passionate about growth and innovation.</p>
-                <p>We organize regular events, workshops, and seminars featuring industry experts who share their knowledge and experience. Whether you're looking to advance your career, build your network, or stay informed about industry trends, we have something for everyone.</p>
+                <h2>About the Society</h2>
+                <p>The Corporate & Commercial Law Society (CCLS) at Campus Law Centre, Faculty of Law, University of Delhi is a student-driven academic initiative dedicated to fostering awareness, research, and professional engagement in the field of corporate and commercial law. The Society was established with the vision of bridging the gap between theoretical legal education and the practical realities of the corporate legal profession, enabling students to develop both strong legal foundations and industry-relevant skills.</p>
+                <p>CCLS provides a dynamic platform for students to explore diverse areas of corporate law through lectures, seminars, workshops, training sessions, and conferences conducted by industry experts, alumni, and legal practitioners. These initiatives aim to equip students with practical insights into the functioning of corporate legal practice while encouraging analytical thinking and professional development.</p>
+                <p>The Society also promotes academic discourse and research through its online blog and journal, which serve as platforms for students to publish and exchange ideas on contemporary developments in corporate and commercial law. By fostering collaboration between students, faculty, alumni, and legal professionals, CCLS seeks to create a vibrant community committed to learning, innovation, and excellence in corporate legal practice.</p>
+                <p>Through its initiatives, the Society strives to nurture the next generation of corporate lawyers by providing meaningful opportunities for learning, networking, and professional growth.</p>
                 <a href="#contact" class="cta-button">Become a Member</a>
             </div>
             <div class="about-image">
-                🏢
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=500&fit=crop" alt="Diverse Community" style="width: 100%; height: 100%; object-fit: cover;"/>
             </div>
         </div>
     </section>
@@ -540,11 +779,11 @@
         <h2 class="section-title">Upcoming Events</h2>
         <div class="events-grid">
             <div class="event-card">
-                <div class="event-image">🎤</div>
+                <div class="event-image">⚖️</div>
                 <div class="event-content">
                     <div class="event-date">March 28, 2024</div>
-                    <h4>Industry Leadership Panel</h4>
-                    <p>Join us for an exclusive panel discussion with senior executives from leading companies sharing their insights on career advancement.</p>
+                    <h4>M&A Law Panel Discussion</h4>
+                    <p>Exclusive panel featuring partners from top commercial law firms discussing latest trends in mergers, acquisitions, and corporate restructuring.</p>
                     <a href="#" class="event-link">Learn More →</a>
                 </div>
             </div>
@@ -552,17 +791,17 @@
                 <div class="event-image">💼</div>
                 <div class="event-content">
                     <div class="event-date">April 5, 2024</div>
-                    <h4>Networking Mixer</h4>
-                    <p>Casual networking event where members can connect with peers, share experiences, and build lasting professional relationships.</p>
+                    <h4>Commercial Law Networking Reception</h4>
+                    <p>Connect with practitioners from leading law firms, in-house counsel, and fellow members interested in commercial law careers.</p>
                     <a href="#" class="event-link">Learn More →</a>
                 </div>
             </div>
             <div class="event-card">
-                <div class="event-image">📖</div>
+                <div class="event-image">📋</div>
                 <div class="event-content">
                     <div class="event-date">April 12, 2024</div>
-                    <h4>Professional Development Workshop</h4>
-                    <p>Develop key skills in this interactive workshop covering communication, leadership, and strategic thinking.</p>
+                    <h4>Corporate Transactions Workshop</h4>
+                    <p>Hands-on workshop exploring contract drafting, due diligence processes, and practical aspects of commercial transactions.</p>
                     <a href="#" class="event-link">Learn More →</a>
                 </div>
             </div>
@@ -571,8 +810,8 @@
 
     <!-- CTA Section -->
     <section class="cta-section" id="contact">
-        <h2>Ready to Join?</h2>
-        <p>Become part of a thriving community of professionals committed to excellence and mutual growth. Sign up today and start your journey with us.</p>
+        <h2>Join the Society Today</h2>
+        <p>Become part of Campus Law Centre's premier community of commercial law enthusiasts. Gain exclusive access to expert seminars, invaluable networking opportunities, and insights into the commercial law sector.</p>
         <button class="cta-button" style="background: white; color: var(--accent); border-color: white;" onclick="handleSignup()">Sign Up Here</button>
     </section>
 
@@ -582,25 +821,25 @@
             <div class="footer-section">
                 <h4>About</h4>
                 <ul>
+                    <li><a href="#">About the Society</a></li>
                     <li><a href="#">Our Mission</a></li>
-                    <li><a href="#">Our Team</a></li>
-                    <li><a href="#">History</a></li>
+                    <li><a href="#">Committee</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Resources</h4>
+                <h4>Events & Resources</h4>
                 <ul>
-                    <li><a href="#">Events</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Upcoming Events</a></li>
+                    <li><a href="#">Past Events</a></li>
+                    <li><a href="#">Resources</a></li>
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Connect</h4>
+                <h4>Connect With Us</h4>
                 <ul>
                     <li><a href="#">LinkedIn</a></li>
-                    <li><a href="#">Twitter</a></li>
                     <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Email</a></li>
                 </ul>
             </div>
             <div class="footer-section">
@@ -608,12 +847,12 @@
                 <ul>
                     <li><a href="#">Contact Us</a></li>
                     <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Privacy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 Professional Society. All rights reserved.</p>
+            <p>&copy; 2024 Commercial & Corporate Law Society | Campus Law Centre. All rights reserved.</p>
         </div>
     </footer>
 
@@ -671,6 +910,36 @@
         function handleSignup() {
             alert('Welcome! In a real implementation, this would open a signup form or redirect to a registration page.');
         }
+
+        // Countdown Timer
+        const targetDate = new Date("April 27, 2026 10:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            if (distance <= 0) {
+                document.getElementById("days").textContent = "00";
+                document.getElementById("hours").textContent = "00";
+                document.getElementById("minutes").textContent = "00";
+                document.getElementById("seconds").textContent = "00";
+                clearInterval(countdownTimer);
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").textContent = String(days).padStart(2, "0");
+            document.getElementById("hours").textContent = String(hours).padStart(2, "0");
+            document.getElementById("minutes").textContent = String(minutes).padStart(2, "0");
+            document.getElementById("seconds").textContent = String(seconds).padStart(2, "0");
+        }
+
+        updateCountdown();
+        const countdownTimer = setInterval(updateCountdown, 1000);
     </script>
 </body>
 </html>
